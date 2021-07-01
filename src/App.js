@@ -32,7 +32,7 @@ const App = () => {
       {genres && (
         <div className="container">
           {Object.values(genres).map((genre) => (
-            <Section key={genre.value} genre={genre.value} />
+            genre.value == "Action" ? <Section key={genre.value} genre={genre.value} /> : undefined
           ))}
         </div>
       )}
@@ -42,6 +42,8 @@ const App = () => {
           setLimit(limit + genreIncrement)
         }}
       />
+      <h1>there is literally nothing else other than action stop trying</h1>
+      <p>pls don't sue me netflix</p>
     </>
   )
 }
